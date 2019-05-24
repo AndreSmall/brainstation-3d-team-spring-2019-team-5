@@ -21,8 +21,8 @@ class App extends React.Component {
       <Router>
         <Navigation />
         <Switch>
+          <Route path="/video" render={props => <VideoDetails {...props} data={this.state.data}/>} />
           <Route path="/" render={props => <Main {...props} data={this.state.data}/>} />
-          <Route path="/:videoId" render={props => <VideoDetails {...props} data={this.state.data}/>} />
         </Switch>
       </Router>
     </div>

@@ -68,9 +68,9 @@ componentDidUpdate(nextProps, prevState) {
         <div className="filter-video__videos-list">
           {/* {this.state.data.filter(item => item.tags.includes('climate change')).map((tagItem,i) => <p key={i} className="comment">{tagItem.name}</p> )} */}
           {/* {this.filterVideos()} */}
-{          this.props.data.filter(item => item.tags.includes(this.state.category1Value)).map((talk,i) => <Link to={talk.url} className="filter-video__video-item"><img className="filter-video__video-item-image" src={talk.related_talks[0].hero} alt=""/><h2>{talk.main_speaker}</h2><p>{talk.name.replace(`${talk.main_speaker}: `, '')}</p></Link> )
+{          this.props.data.filter(item => item.tags.includes(this.state.category1Value)).map((talk,i) => <Link to='video' className="filter-video__video-item"><img className="filter-video__video-item-image" src={talk.related_talks[0].hero} alt=""/><h2>{talk.main_speaker}</h2><p>{talk.name.replace(`${talk.main_speaker}: `, '')}</p></Link> )
 }          {/* {this.props.data.filter(item => item.tags.includes('climate change')).map((talk,i) => <Link to={talk.url} className="filter-video__video-item"></Link> ) */}
-}
+
         </div>
 
       </section>
